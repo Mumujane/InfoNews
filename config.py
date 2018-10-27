@@ -8,6 +8,8 @@ class Config:
     # 数据库配置
     SQLALCHEMY_DATABASE_URI = "mysql://root:1234qwer@127.0.0.1:3306/infonews"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    # 每次请求结束后, 自动提交数据库操作
+    SQLALCHEMY_COMMIT_ON_TEARDOWN = True
 
     # redis 配置
     REDIS_HOST = "127.0.0.1"

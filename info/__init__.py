@@ -55,6 +55,10 @@ def create_app(config_type):
     # 导入models 文件 生成数据库
     import info.models
 
+    # 添加过滤器
+    from info.utils.common import func_index_convert
+    app.add_template_filter(func_index_convert, "index_convert")
+
     return app
 
 
